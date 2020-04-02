@@ -1,10 +1,10 @@
 using MySql.Data.MySqlClient;
 
-namespace Bifrost.SQL.Connection
+namespace Bifrost.SQL.Connections
 {
     public class MySql
     {
-        public static MySqlConnection Connection(string appName)
+        public static MySqlConnection Get(string appName)
         {
             MySqlConnection connection = new MySqlConnection() { ConnectionString = ConnectionStrings.Get(appName) };
             connection.Open();

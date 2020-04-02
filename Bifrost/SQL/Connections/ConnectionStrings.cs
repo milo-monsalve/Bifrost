@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace Bifrost.SQL.Connection
+namespace Bifrost.SQL.Connections
 {
 
     public class AppModel
