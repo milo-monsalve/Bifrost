@@ -8,7 +8,7 @@ namespace Bifrost.SQL.Connections
     {
         public string AppName { get; set; }
         public string RDBMS { get; set; }
-        public int Port { get; set; }
+        public int     Port { get; set; }
         public string DbProductionName { get; set; }
         public string DbDevelopmentName { get; set; }
         public string DbHostName { get; set; }
