@@ -2,9 +2,9 @@ using System.DirectoryServices;
 
 namespace Bifrost.Windows.ActiveDorectory
 {
-     public class UserValidator
+    public class UserValidator
     {
-        public static bool ValidateUser(string User, string Pwd,string Host,string Path)
+        public static bool ValidateUser(string User, string Pwd, string Host, string Path)
         {
             //Armamos la cadena completa de Host y User
             string domainAndUsername = Host + @"\" + User.Trim();
@@ -16,13 +16,10 @@ namespace Bifrost.Windows.ActiveDorectory
                 //Verificamos que los datos de logeo proporcionados son correctos
                 SearchResult result = search.FindOne();
                 if (result == null)
-                {
                     return false;
-                }
                 else
-                {
                     return true;
-                }
+
             }
             catch
             {

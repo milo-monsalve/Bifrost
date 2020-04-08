@@ -121,7 +121,7 @@ namespace Bifrost.SQL.Processes
             }
         }
 
-        public static SqlParameter[] EntityToparameters<T>(T obj)
+        public static SqlParameter[] EntityToParameters<T>(T obj)
         {
 
             PropertyInfo[] props = typeof(T).GetProperties();
