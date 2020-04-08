@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using Bifrost.Windows.Security;
 
 namespace Bifrost.SQL.Connections
 {
@@ -24,12 +25,12 @@ namespace Bifrost.SQL.Connections
 
         private static string SQlServerStringConnection(AppModel app)
         {
-            return "Server=" + app.DbHostName + ";Database=" + (DevelopmentMode ? app.DbDevelopmentName : app.DbProductionName) + ";User Id=" + app.DbUserName + ";Password=" + app.DbUserPass + ";";
+            return "Server=" + app.DbHostName + ";Database=" + (DevelopmentMode ? app.DbDevelopmentName : app.DbProductionName) + ";User Id=" + app.DbUserName + ";Password=" + Claim.Get(app.DbUserPass) + ";";
         }
 
         private static string MySQlStringConnection(AppModel app)
         {
-            return "SERVER=" + app.DbHostName + ";Port=" + app.Port.ToString() + ";DATABASE=" + (DevelopmentMode ? app.DbDevelopmentName : app.DbProductionName) + ";UID=" + app.DbUserName + ";PASSWORD=" + app.DbUserPass + ";";
+            return "SERVER=" + app.DbHostName + ";Port=" + app.Port.ToString() + ";DATABASE=" + (DevelopmentMode ? app.DbDevelopmentName : app.DbProductionName) + ";UID=" + app.DbUserName + ";PASSWORD=" + Claim.Get(app.DbUserPass) + ";";
         }
 
         public static string Get(string appName)
