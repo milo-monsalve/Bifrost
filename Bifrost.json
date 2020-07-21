@@ -1,8 +1,8 @@
 [
     {
         "appname":"",
-        "rdnms":"",
-        "port":"",
+        "rdbms":"",
+        "port":0,
         "dbproductionname":"",
         "dbdevelopmentname":"",
         "dbhostname":"",
