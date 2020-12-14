@@ -14,6 +14,7 @@ namespace Bifrost.Windows.ActiveDirectory
         public string Title { get; set; }
         public string Region { get; set; }
         public string Employeeid { get; set; }
+        public string Mobile { get; set; }
     }
 
     public static class UserInfo
@@ -34,6 +35,7 @@ namespace Bifrost.Windows.ActiveDirectory
                 Result.Mail = GetProperty(Item[0], "mail");
                 Result.Region = GetProperty(Item[0], "l");
                 Result.Title = GetProperty(Item[0], "title");
+                Result.Mobile = GetProperty(Item[0], "mobile");
             }
 
             return Result;

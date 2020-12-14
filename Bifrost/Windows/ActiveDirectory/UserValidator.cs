@@ -1,6 +1,6 @@
 using System.DirectoryServices;
 
-namespace Bifrost.Windows.ActiveDorectory
+namespace Bifrost.Windows.ActiveDirectory
 {
     public class UserValidator
     {
