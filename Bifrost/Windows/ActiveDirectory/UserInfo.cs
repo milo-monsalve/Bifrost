@@ -30,7 +30,7 @@ namespace Bifrost.Windows.ActiveDirectory
             if(Item.Count > 0)
             {
                 Result.Department = GetProperty(Item[0], "department");
-                Result.DisplayName = GetProperty(Item[0], "sisplayname");
+                Result.DisplayName = GetProperty(Item[0], "displayname");
                 Result.Employeeid = GetProperty(Item[0], "employeeid");
                 Result.Mail = GetProperty(Item[0], "mail");
                 Result.Region = GetProperty(Item[0], "l");
