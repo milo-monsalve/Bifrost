@@ -1,4 +1,8 @@
-namespace Bifrost.Windows.Security
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Bifrost.Security.Save
 {
     public class Encript
     {
@@ -7,7 +11,8 @@ namespace Bifrost.Windows.Security
             return System.Text.Encoding.Unicode.GetString(System.Convert.FromBase64String(text));
         }
 
-        public static string Encode(string text){
+        public static string Encode(string text)
+        {
             return System.Convert.ToBase64String(System.Text.Encoding.Unicode.GetBytes(text));
         }
     }

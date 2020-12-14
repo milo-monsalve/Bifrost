@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
-using Bifrost.Windows.Security;
+using Bifrost.Security.Save;
 
 namespace Bifrost.SQL.Connections
 {
