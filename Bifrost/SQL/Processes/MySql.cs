@@ -1,14 +1,17 @@
 using System.Reflection;
 using System.Collections.Generic;
 using MySql.Data.MySqlClient;
+using Bifrost.SQL.Connections;
+using Bifrost.SQL.Processes;
 
-namespace Bifrost.SQL.Processes
+
+namespace Bifrost.Processes
 {
-        public class MySql
+    public class MySqlProcesses
     {
         public static List<T> SpToList<T>(string app, string storedProcedure, MySqlParameter parameter)
         {
-            using (MySqlConnection connection = Connections.MySql.Get(app))
+            using (MySqlConnection connection = BifrostMySql.Get(app))
             using (MySqlCommand command = new MySqlCommand(storedProcedure, connection))
             {
                 command.CommandType = System.Data.CommandType.StoredProcedure;
@@ -19,7 +22,7 @@ namespace Bifrost.SQL.Processes
 
         public static List<T> SpToList<T>(string app, string storedProcedure, MySqlParameter[] parameters)
         {
-            using (MySqlConnection connection = Connections.MySql.Get(app))
+            using (MySqlConnection connection = BifrostMySql.Get(app))
             using (MySqlCommand command = new MySqlCommand(storedProcedure, connection))
             {
                 command.CommandType = System.Data.CommandType.StoredProcedure;
@@ -31,7 +34,7 @@ namespace Bifrost.SQL.Processes
 
         public static string SpToStringScalar(string app, string storedProcedure, MySqlParameter parameter)
         {
-            using (MySqlConnection connection = Connections.MySql.Get(app))
+            using (MySqlConnection connection = BifrostMySql.Get(app))
             using (MySqlCommand command = new MySqlCommand(storedProcedure, connection))
             {
                 command.CommandType = System.Data.CommandType.StoredProcedure;
@@ -42,7 +45,7 @@ namespace Bifrost.SQL.Processes
 
         public static string SpToStringScalar(string app, string storedProcedure, MySqlParameter[] parameters)
         {
-            using (MySqlConnection connection = Connections.MySql.Get(app))
+            using (MySqlConnection connection = BifrostMySql.Get(app))
             using (MySqlCommand command = new MySqlCommand(storedProcedure, connection))
             {
                 command.CommandType = System.Data.CommandType.StoredProcedure;
@@ -54,7 +57,7 @@ namespace Bifrost.SQL.Processes
 
         public static int SpToIntScalar(string app, string storedProcedure, MySqlParameter parameter)
         {
-            using (MySqlConnection connection = Connections.MySql.Get(app))
+            using (MySqlConnection connection = BifrostMySql.Get(app))
             using (MySqlCommand command = new MySqlCommand(storedProcedure, connection))
             {
                 command.CommandType = System.Data.CommandType.StoredProcedure;
@@ -65,7 +68,7 @@ namespace Bifrost.SQL.Processes
 
         public static int SpToIntScalar(string app, string storedProcedure, MySqlParameter[] parameters)
         {
-            using (MySqlConnection connection = Connections.MySql.Get(app))
+            using (MySqlConnection connection = BifrostMySql.Get(app))
             using (MySqlCommand command = new MySqlCommand(storedProcedure, connection))
             {
                 command.CommandType = System.Data.CommandType.StoredProcedure;
@@ -77,7 +80,7 @@ namespace Bifrost.SQL.Processes
 
         public static double SpToDoubleScalar(string app, string storedProcedure, MySqlParameter parameter)
         {
-            using (MySqlConnection connection = Connections.MySql.Get(app))
+            using (MySqlConnection connection = BifrostMySql.Get(app))
             using (MySqlCommand command = new MySqlCommand(storedProcedure, connection))
             {
                 command.CommandType = System.Data.CommandType.StoredProcedure;
@@ -88,7 +91,7 @@ namespace Bifrost.SQL.Processes
 
         public static double SpToDoubleScalar(string app, string storedProcedure, MySqlParameter[] parameters)
         {
-            using (MySqlConnection connection = Connections.MySql.Get(app))
+            using (MySqlConnection connection = BifrostMySql.Get(app))
             using (MySqlCommand command = new MySqlCommand(storedProcedure, connection))
             {
                 command.CommandType = System.Data.CommandType.StoredProcedure;
@@ -100,7 +103,7 @@ namespace Bifrost.SQL.Processes
 
         public static bool SpToBoolScalar(string app, string storedProcedure, MySqlParameter parameter)
         {
-            using (MySqlConnection connection = Connections.MySql.Get(app))
+            using (MySqlConnection connection = BifrostMySql.Get(app))
             using (MySqlCommand command = new MySqlCommand(storedProcedure, connection))
             {
                 command.CommandType = System.Data.CommandType.StoredProcedure;
@@ -111,7 +114,7 @@ namespace Bifrost.SQL.Processes
 
         public static bool SpToBoolScalar(string app, string storedProcedure, MySqlParameter[] parameters)
         {
-            using (MySqlConnection connection = Connections.MySql.Get(app))
+            using (MySqlConnection connection = BifrostMySql.Get(app))
             using (MySqlCommand command = new MySqlCommand(storedProcedure, connection))
             {
                 command.CommandType = System.Data.CommandType.StoredProcedure;

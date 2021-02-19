@@ -2,7 +2,7 @@ using MySql.Data.MySqlClient;
 
 namespace Bifrost.SQL.Connections
 {
-    public class MySql
+    public class BifrostMySql
     {
         public static MySqlConnection Get(string appName)
         {

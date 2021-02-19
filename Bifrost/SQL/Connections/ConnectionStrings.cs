@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using Bifrost.Security.Save;
 
-namespace Bifrost.SQL.Connections
+namespace Bifrost
 {
 
     public class AppModel

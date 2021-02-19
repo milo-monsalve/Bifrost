@@ -1,14 +1,16 @@
 using System.Reflection;
 using System.Data.SqlClient;
 using System.Collections.Generic;
+using Bifrost.SQL.Connections;
+using Bifrost.SQL.Processes;
 
-namespace Bifrost.SQL.Processes
+namespace Bifrost
 {
-        public class SqlServer
+    public class SqlServerProcesses
     {
         public static List<T> SpToList<T>(string app, string storedProcedure, SqlParameter parameter)
         {
-            using (SqlConnection connection = Connections.SqlServer.Get(app))
+            using (SqlConnection connection = BifrostSqlServer.Get(app))
             using (SqlCommand command = new SqlCommand(storedProcedure, connection))
             {
                 command.CommandType = System.Data.CommandType.StoredProcedure;
@@ -19,7 +21,7 @@ namespace Bifrost.SQL.Processes
 
         public static List<T> SpToList<T>(string app, string storedProcedure, SqlParameter[] parameters)
         {
-            using (SqlConnection connection = Connections.SqlServer.Get(app))
+            using (SqlConnection connection = BifrostSqlServer.Get(app))
             using (SqlCommand command = new SqlCommand(storedProcedure, connection))
             {
                 command.CommandType = System.Data.CommandType.StoredProcedure;
@@ -31,7 +33,7 @@ namespace Bifrost.SQL.Processes
 
         public static string SpToStringScalar(string app, string storedProcedure, SqlParameter parameter)
         {
-            using (SqlConnection connection = Connections.SqlServer.Get(app))
+            using (SqlConnection connection = BifrostSqlServer.Get(app))
             using (SqlCommand command = new SqlCommand(storedProcedure, connection))
             {
                 command.CommandType = System.Data.CommandType.StoredProcedure;
@@ -42,7 +44,7 @@ namespace Bifrost.SQL.Processes
 
         public static string SpToStringScalar(string app, string storedProcedure, SqlParameter[] parameters)
         {
-            using (SqlConnection connection = Connections.SqlServer.Get(app))
+            using (SqlConnection connection = BifrostSqlServer.Get(app))
             using (SqlCommand command = new SqlCommand(storedProcedure, connection))
             {
                 command.CommandType = System.Data.CommandType.StoredProcedure;
@@ -54,7 +56,7 @@ namespace Bifrost.SQL.Processes
 
         public static int SpToIntScalar(string app, string storedProcedure, SqlParameter parameter)
         {
-            using (SqlConnection connection = Connections.SqlServer.Get(app))
+            using (SqlConnection connection = BifrostSqlServer.Get(app))
             using (SqlCommand command = new SqlCommand(storedProcedure, connection))
             {
                 command.CommandType = System.Data.CommandType.StoredProcedure;
@@ -65,7 +67,7 @@ namespace Bifrost.SQL.Processes
 
         public static int SpToIntScalar(string app, string storedProcedure, SqlParameter[] parameters)
         {
-            using (SqlConnection connection = Connections.SqlServer.Get(app))
+            using (SqlConnection connection = BifrostSqlServer.Get(app))
             using (SqlCommand command = new SqlCommand(storedProcedure, connection))
             {
                 command.CommandType = System.Data.CommandType.StoredProcedure;
@@ -77,7 +79,7 @@ namespace Bifrost.SQL.Processes
 
         public static double SpToDoubleScalar(string app, string storedProcedure, SqlParameter parameter)
         {
-            using (SqlConnection connection = Connections.SqlServer.Get(app))
+            using (SqlConnection connection = BifrostSqlServer.Get(app))
             using (SqlCommand command = new SqlCommand(storedProcedure, connection))
             {
                 command.CommandType = System.Data.CommandType.StoredProcedure;
@@ -88,7 +90,7 @@ namespace Bifrost.SQL.Processes
 
         public static double SpToDoubleScalar(string app, string storedProcedure, SqlParameter[] parameters)
         {
-            using (SqlConnection connection = Connections.SqlServer.Get(app))
+            using (SqlConnection connection = BifrostSqlServer.Get(app))
             using (SqlCommand command = new SqlCommand(storedProcedure, connection))
             {
                 command.CommandType = System.Data.CommandType.StoredProcedure;
@@ -100,7 +102,7 @@ namespace Bifrost.SQL.Processes
 
         public static bool SpToBoolScalar(string app, string storedProcedure, SqlParameter parameter)
         {
-            using (SqlConnection connection = Connections.SqlServer.Get(app))
+            using (SqlConnection connection = BifrostSqlServer.Get(app))
             using (SqlCommand command = new SqlCommand(storedProcedure, connection))
             {
                 command.CommandType = System.Data.CommandType.StoredProcedure;
@@ -111,7 +113,7 @@ namespace Bifrost.SQL.Processes
 
         public static bool SpToBoolScalar(string app, string storedProcedure, SqlParameter[] parameters)
         {
-            using (SqlConnection connection = Connections.SqlServer.Get(app))
+            using (SqlConnection connection = BifrostSqlServer.Get(app))
             using (SqlCommand command = new SqlCommand(storedProcedure, connection))
             {
                 command.CommandType = System.Data.CommandType.StoredProcedure;

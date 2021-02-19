@@ -2,7 +2,7 @@ using System.Data.SqlClient;
 
 namespace Bifrost.SQL.Connections
 {
-    public class SqlServer
+    public class BifrostSqlServer
     {
         public static SqlConnection Get(string appName)
         {
