@@ -48,7 +48,7 @@ namespace Bifrost.SQL.Processes
 
                 response.Add(row);
             }
-
+            
             return response;
         }
     }
